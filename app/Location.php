@@ -10,4 +10,8 @@ class Location extends Model
 {
     //
     use SoftDeletes;
+
+    public function Departments(){
+        return $this->hasMany(Department::class,'location_id','id');
+    }
 }
